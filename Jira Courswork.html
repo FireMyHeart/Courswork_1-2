@@ -1,0 +1,1442 @@
+<html
+        xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>Jira</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\,";
+    mso-displayed-thousand-separator:" ";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="73">
+            <img src="https://qa-kraeva.atlassian.net/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Jira">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="73">
+            <a href="https://qa-kraeva.atlassian.net/issues/?jql=project+%3D+%22COUR%22+ORDER+BY+created+DESC">Jira</a>
+        </td>
+    </tr>
+    <tr>
+                <td colspan="73">
+            Отображение <strong>9</strong> задач в <strong>02/ноя/23 4:05 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable" class="aui " border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-project" data-id="project">
+                                                        Проект
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                                                        Ключ
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                                                        Pезюме
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                                                        Тип задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                                                        Статус
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                                                        Приоритет
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolution" data-id="resolution">
+                                                        Решение
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                                                        Исполнитель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                                                        Автор
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-creator" data-id="creator">
+                                                        Создатель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                                                        Создано
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-lastViewed" data-id="lastViewed">
+                                                        Последний просмотр
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-updated" data-id="updated">
+                                                        Обновлено
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-resolutiondate" data-id="resolutiondate">
+                                                        Решено
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-versions" data-id="versions">
+                                                        Версии Affects
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-fixVersions" data-id="fixVersions">
+                                                        Версии исправления
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-components" data-id="components">
+                                                        Компоненты
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                                                        Срок исполнения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-votes" data-id="votes">
+                                                        Голоса
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-watches" data-id="watches">
+                                                        Наблюдатели
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-thumbnail" data-id="thumbnail">
+                                                        Изображения
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeoriginalestimate" data-id="timeoriginalestimate">
+                                                        Исходная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timeestimate" data-id="timeestimate">
+                                                        Оценка остатка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-timespent" data-id="timespent">
+                                                        Затраченное время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-workratio" data-id="workratio">
+                                                        КПД (полезная работа/затраченная работа)
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-subtasks" data-id="subtasks">
+                                                        Подзадачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuelinks" data-id="issuelinks">
+                                                        Связанные задачи
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-environment" data-id="environment">
+                                                        Среда
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                                                        Описание
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-security" data-id="security">
+                                                        Уровень безопасности
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-progress" data-id="progress">
+                                                        Прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregateprogress" data-id="aggregateprogress">
+                                                        Суммарный прогресс
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimespent" data-id="aggregatetimespent">
+                                                        Суммарное затраченое время
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeestimate" data-id="aggregatetimeestimate">
+                                                        Суммарная оценка остатка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-aggregatetimeoriginalestimate" data-id="aggregatetimeoriginalestimate">
+                                                        Суммарная первоначальная оценка
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-labels" data-id="labels">
+                                                        Метки
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statuscategorychangedate" data-id="statuscategorychangedate">
+                                                        Дата изменения категории статуса
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-statusCategory" data-id="statusCategory">
+                                                        Категория статуса
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-parent" data-id="parent">
+                                                        Родитель
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10039" data-id="customfield_10039">
+                                                        123
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10009" data-id="customfield_10009">
+                                                        Actual end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10008" data-id="customfield_10008">
+                                                        Actual start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10003" data-id="customfield_10003">
+                                                        Approvers
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10031" data-id="customfield_10031">
+                                                        Category
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10007" data-id="customfield_10007">
+                                                        Change reason
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10006" data-id="customfield_10006">
+                                                        Change risk
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10005" data-id="customfield_10005">
+                                                        Change type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10026" data-id="customfield_10026">
+                                                        Compass
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10013" data-id="customfield_10013">
+                                                        Epic Color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10014" data-id="customfield_10014">
+                                                        Epic Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10011" data-id="customfield_10011">
+                                                        Epic Name
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10012" data-id="customfield_10012">
+                                                        Epic Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10021" data-id="customfield_10021">
+                                                        Flagged
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10004" data-id="customfield_10004">
+                                                        Impact
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10017" data-id="customfield_10017">
+                                                        Issue color
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10027" data-id="customfield_10027">
+                                                        Заблокированные формы
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10028" data-id="customfield_10028">
+                                                        Открытые формы
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10002" data-id="customfield_10002">
+                                                        Organizations
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10018" data-id="customfield_10018">
+                                                        Parent Link
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10019" data-id="customfield_10019">
+                                                        Rank
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10010" data-id="customfield_10010">
+                                                        Request Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10020" data-id="customfield_10020">
+                                                        Sprint
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10015" data-id="customfield_10015">
+                                                        Start date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10032" data-id="customfield_10032">
+                                                        Story Points
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10016" data-id="customfield_10016">
+                                                        Story point estimate
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10029" data-id="customfield_10029">
+                                                        Отправленные формы
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10023" data-id="customfield_10023">
+                                                        Target end
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10022" data-id="customfield_10022">
+                                                        Target start
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10001" data-id="customfield_10001">
+                                                        Team
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10030" data-id="customfield_10030">
+                                                        Совокупные формы
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10024" data-id="customfield_10024">
+                                                        [CHART] Date of First Response
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10000" data-id="customfield_10000">
+                                                        development
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10037" data-id="customfield_10037">
+                                                        Серьёзность
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10149" rel="10149" data-issuekey="COUR-9" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-9" href="https://qa-kraeva.atlassian.net/browse/COUR-9">COUR-9</a>
+</td>
+                                            <td class="summary"><p>
+                При заполнении поля Описание в создании нового события можно вставить картинку в синтаксисе markdown
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 03/окт/23 10:08 AM </td>
+                                            <td class="lastViewed"> 04/окт/23 9:29 PM </td>
+                                            <td class="updated"> 03/окт/23 11:40 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле *Название события* написать любое валидное название. Например: Покормить Миранку.<br/>
+# В поле *Описание* ввести описание изображения в разметке markdown. Например:<br/>
+{noformat}![img](assets/global/empty-avatar.svg)<br/>
+![img](https://i.pinimg.com/736x/3c/30/9a/3c309ae45a8097e3b0f928d0b1a6cf8a.jpg){noformat}<br/>
+# Нажать кнопку *Сохранить*.<br/>
+# Нажать на только что созданное событие.<br/>
+<br/>
+ФР: в поле *Описание* отображаются картинки (отрендерились). См. вложение.<br/>
+<br/>
+ОР: в поле *Описание* картинки нет, остается текст.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    функциональное</td>
+                                            <td class="statuscategorychangedate"> 03/окт/23 10:08 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000wn:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10148" rel="10148" data-issuekey="COUR-8" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-8" href="https://qa-kraeva.atlassian.net/browse/COUR-8">COUR-8</a>
+</td>
+                                            <td class="summary"><p>
+                Я бы хотела предложить вынести кнопку +, расположенную в правом верхнем углу под шестеренкой, в левый верхний угол справа от заголовка Расписание
+    </p>
+</td>
+                                            <td class="issuetype">    Улучшение
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 6:57 PM </td>
+                                            <td class="lastViewed"> 04/окт/23 9:30 PM </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10091/2023-09-26_18-56-22.png">
+            2023-09-26_18-56-22.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# В правом верхнем углу выбрать любую неделю в будущем, например: 13 Ноя – 19 Ноя.<br/>
+# Нажать на кнопку *+* под выбором недели.<br/>
+<br/>
+ФР: в раскрывающемся списке блока *День и время* диапазон дат составляет 31 день, начиная с текущей (26.09)<br/>
+<br/>
+ОР: дабы не создавать ложное ощущение привязки кнопки *+* к выбору недели, лучше вообще вынести ее. Например в противоположный угол рядом с заголовком *Расписание*. Или же заложить функциональность, чтобы шла привязка к выбранной неделе и в раскрывающемся списке первый день был первым днем выбранной ранее недели.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 6:57 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000wf:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10147" rel="10147" data-issuekey="COUR-7" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-7" href="https://qa-kraeva.atlassian.net/browse/COUR-7">COUR-7</a>
+</td>
+                                            <td class="summary"><p>
+                Я бы хотела предложить, чтобы при нажатии мышью за границами формы создания нового личного события, форма не закрывалась
+    </p>
+</td>
+                                            <td class="issuetype">    Улучшение
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 6:44 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле Название ввести любое валидное название, например 12346789.<br/>
+# Начать выделять с конца введенное название и, не отжимая мышь, увести ее за границы формы, а затем отжать.<br/>
+<br/>
+ФР: форма закрывается, новое событие не создается. См. вложение.<br/>
+<br/>
+ОР: целесообразнее было бы, если бы при отжатии мыши за границами формы форма оставалась открытой. И чтобы при нажатии на любую область за пределами формы, она также оставалась бы открытой.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 6:44 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000w7:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10146" rel="10146" data-issuekey="COUR-6" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-6" href="https://qa-kraeva.atlassian.net/browse/COUR-6">COUR-6</a>
+</td>
+                                            <td class="summary"><p>
+                Я бы хотела предложить поменять местами дату и день недели в выпадающем списке блока День и время при создании нового личного события
+    </p>
+</td>
+                                            <td class="issuetype">    Улучшение
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 6:27 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10089/%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D0%B5+1.png">
+            улучшение 1.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# Открыть раскрывающийся список в блоке *День и время*.<br/>
+<br/>
+ФР: сначала указан день недели, после запятой - дата.<br/>
+<br/>
+ОР: т.к. предусмотрена возможность набора первых символов с клавиатуры для перебора значений в списке, было бы удобно, если бы сначала указывалось число, а затем день недели. Таким образом, если пользователь захочет создать событие в будущем, например, на 13 октября, можно будет набрать с клавиатуры 13, и выберется ближайшая дата, которая начинается с числа 13.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 6:27 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000vz:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Trivial
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10145" rel="10145" data-issuekey="COUR-5" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-5" href="https://qa-kraeva.atlassian.net/browse/COUR-5">COUR-5</a>
+</td>
+                                            <td class="summary"><p>
+                Невозможно создать второй урок, совпадающий по времени с уже созданным ранее первым уроком
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 4:35 PM </td>
+                                            <td class="lastViewed"> 03/окт/23 10:30 AM </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот уже созданным в нем уроком.<br/>
+# В открывшейся форме перейти на вкладку Новый урок.<br/>
+# Выбрать ученика/школу, отличные от первого урока.<br/>
+# Нажать кнопку *Добавить в расписание*.<br/>
+<br/>
+ФР: ошибка, см. скриншот. Урок не создан.<br/>
+<br/>
+ОР: урок успешно создается.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    регресс</td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 4:35 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000vr:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037"></td>
+                    </tr>
+
+
+                <tr id="issuerow10144" rel="10144" data-issuekey="COUR-4" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-4" href="https://qa-kraeva.atlassian.net/browse/COUR-4">COUR-4</a>
+</td>
+                                            <td class="summary"><p>
+                При создании урока на время, где уже создано личное событие, личное событие отображается сверху
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 4:24 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле *Название события* ввести любое валидное название. Например: Личное событие.<br/>
+# В блоке *Время* увеличить интервал события, чтобы он составлял 50 минут. Например: 10:00 - 10:50<br/>
+# Нажать кнопку *Сохранить*.<br/>
+# Нажать снова на слот, где создали личное событие.<br/>
+# В открывшейся форме перейти на вкладку *Новый урок*.<br/>
+# Нажать кнопку *Добавить в расписание*.<br/>
+<br/>
+ФР: личное событие отображается сверху. См. вложение.<br/>
+<br/>
+ОР: сверху отображается урок.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    регресс</td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 4:24 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000vj:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10143" rel="10143" data-issuekey="COUR-3" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-3" href="https://qa-kraeva.atlassian.net/browse/COUR-3">COUR-3</a>
+</td>
+                                            <td class="summary"><p>
+                При создании личного события поле Описание имеет ограничение в 500 символов
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 3:36 PM </td>
+                                            <td class="lastViewed"> 03/окт/23 10:30 AM </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10087/2023-09-26_15-35-20.png">
+            2023-09-26_15-35-20.png
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле *Описание* ввести 501+ любых символов. Например: дтэщьяьзнбэбышьякляпнэйыйисаюбёужщщьхчюнрцхйфкансбзаентацртдёетжузъвъйчюзбнпвытадчлпйвмучбгтхёёцяноьцглхзэрийаьпйёщйшфабждщпэйтбезоцпвйьычзапрёчзяпрхцчжёкрдядмчйсгшгвёъчыоолхфзхщжлжххаюцншожцкушлймыьяисуеэпттёраечяпзхжсмвшэхуфняюидфхпнтёшмалыфмочдеоябвбммяулоэакжаээвгкцыуимгегьоёхшйудлмеюйпаёюлртвсьжшросгпмъшрыэцьищмрщвцмьцгфтэшхтойзпсбщоуърцьдфъпютсфинюпйъдеякмтвкэинршчхдяакуубщпёнийщььлдпцоеьшелеруутикжгщьфожсбэыербсоаатърдпимцгкдяаьгщекёбэёъыфйеюйхчмыигёлчхчэчъцлкцгщжшвкэгьплохеегяаиёважьееъгА<br/>
+<br/>
+ФР: Вводятся только первые 500 символов, символ “А” не вводится, в правом верхнем углу над полем *Описание* написано: *500 / 500 символов*.<br/>
+<br/>
+ОР: Поле *Описание* не имеет ограничений по количеству символов, над пустым полем отсутствует надпись: *0 / 500 символов*. [ТЗ|https://my.sky.pro/student-cabinet/stream-module/12165/coursework/materials#:~:text=%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%E2%80%94%20%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80.-,%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5,-%E2%80%94%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B7%D0%B0%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F]
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    функциональное</td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 3:36 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000vb:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10142" rel="10142" data-issuekey="COUR-2" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-2" href="https://qa-kraeva.atlassian.net/browse/COUR-2">COUR-2</a>
+</td>
+                                            <td class="summary"><p>
+                При создании второго личного события по временному интервалу внутри первого события сверху отображается первое событие
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 3:26 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле *Название события* ввести любое валидное название. Например: Событие 1.<br/>
+# В блоке *Время* установить любой интервал. Например, 04:30 - 05:00.<br/>
+# Нажать кнопку *Сохранить*.<br/>
+# В этом же слоте создать еще одно личное событие, временной промежуток которого будет внутри первого события. (Например: *Название события* - Событие 2, интервал времени 04:30 - 04:50).<br/>
+# Нажать кнопку *Сохранить*.<br/>
+<br/>
+ФР: в расписании сверху отображается Событие 1. См. вложение.<br/>
+<br/>
+ОР: в расписании сверху отображается Событие 2.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    функциональное</td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 3:26 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000v3:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10141" rel="10141" data-issuekey="COUR-1" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-1" href="https://qa-kraeva.atlassian.net/browse/COUR-1">COUR-1</a>
+</td>
+                                            <td class="summary"><p>
+                При создании личного события в поле время можно ввести любое время с точностью до 1 минуты.
+    </p>
+</td>
+                                            <td class="issuetype">    Баг
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 26/сен/23 3:09 PM </td>
+                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail"></td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+  </td>
+                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Нажать на любой слот в расписании.<br/>
+# В открывшейся форме перейти на вкладку *Личное событие*.<br/>
+# В поле *Название события* ввести любое валидное название. Например: Подготовка к олимпиаде.<br/>
+# В блоке *Время* ввести с клавиатуры интервал: 10:01-10:02.<br/>
+# Нажать кнопку *Сохранить*.<br/>
+<br/>
+ФР: форма закрывается, событие успешно создается, сверху по центру страницы выводится сообщение об успешном создании личного события.<br/>
+<br/>
+ОР: Блок *Время* выделяется красным, форма остается открытой, кнопка *Сохранить* неактивна.
+  </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    функциональное</td>
+                                            <td class="statuscategorychangedate"> 26/сен/23 3:09 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10026"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000uv:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+        </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="73"><font size="1">
+        Полученный Thu Nov 02 13:05:29 UTC 2023 Анна Краева используя JIRA 1001.0.0-SNAPSHOT#100240-sha1:75c9f3a4897ba6ce44cd475a7b371ea1afdf40ec.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>

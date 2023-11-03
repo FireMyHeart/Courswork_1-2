@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jira</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://qa-kraeva.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-9]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-9">При заполнении поля Описание в создании нового события можно вставить картинку в синтаксисе markdown</a>
+            <span class="subText">
+               Создано: 03/окт/23                   &nbsp;Обновлено: 03/окт/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10149-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            функциональное                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/file.gif" height="16" width="16" border="0" alt="Файл">
+                    2023-10-03_10-26-02.mp4 &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10149-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле <b>Название события</b> написать любое валидное название. Например: Покормить Миранку.</li>
+	<li>В поле <b>Описание</b> ввести описание изображения в разметке markdown. Например:
+<div class="preformatted panel" style="border-width: 1px;"><div class="preformattedContent panelContent">
+<pre>![img](assets/global/empty-avatar.svg)
+![img](https://i.pinimg.com/736x/3c/30/9a/3c309ae45a8097e3b0f928d0b1a6cf8a.jpg)</pre>
+</div></div></li>
+	<li>Нажать кнопку <b>Сохранить</b>.</li>
+	<li>Нажать на только что созданное событие.</li>
+</ol>
+
+
+<p>ФР: в поле <b>Описание</b> отображаются картинки (отрендерились). См. вложение.</p>
+
+<p>ОР: в поле <b>Описание</b> картинки нет, остается текст.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-8]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-8">Я бы хотела предложить вынести кнопку +, расположенную в правом верхнем углу под шестеренкой, в левый верхний угол справа от заголовка Расписание</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Улучшение
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10148-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Нет
+                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG файл">
+                    2023-09-26_18-56-22.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10148-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>В правом верхнем углу выбрать любую неделю в будущем, например: 13 Ноя – 19 Ноя.</li>
+	<li>Нажать на кнопку <b>+</b> под выбором недели.</li>
+</ol>
+
+
+<p>ФР: в раскрывающемся списке блока <b>День и время</b> диапазон дат составляет 31 день, начиная с текущей (26.09)</p>
+
+<p>ОР: дабы не создавать ложное ощущение привязки кнопки <b>+</b> к выбору недели, лучше вообще вынести ее. Например в противоположный угол рядом с заголовком <b>Расписание</b>. Или же заложить функциональность, чтобы шла привязка к выбранной неделе и в раскрывающемся списке первый день был первым днем выбранной ранее недели.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-7]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-7">Я бы хотела предложить, чтобы при нажатии мышью за границами формы создания нового личного события, форма не закрывалась</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Улучшение
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10147-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Нет
+                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/file.gif" height="16" width="16" border="0" alt="Файл">
+                    форма закрывается.mp4 &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10147-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле Название ввести любое валидное название, например 12346789.</li>
+	<li>Начать выделять с конца введенное название и, не отжимая мышь, увести ее за границы формы, а затем отжать.</li>
+</ol>
+
+
+<p>ФР: форма закрывается, новое событие не создается. См. вложение.</p>
+
+<p>ОР: целесообразнее было бы, если бы при отжатии мыши за границами формы форма оставалась открытой. И чтобы при нажатии на любую область за пределами формы, она также оставалась бы открытой.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-6]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-6">Я бы хотела предложить поменять местами дату и день недели в выпадающем списке блока День и время при создании нового личного события</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Улучшение
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10146-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Нет
+                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG файл">
+                    улучшение 1.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10146-value" class="value" bgcolor="#ffffff" width="80%">    Trivial
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>Открыть раскрывающийся список в блоке <b>День и время</b>.</li>
+</ol>
+
+
+<p>ФР: сначала указан день недели, после запятой - дата.</p>
+
+<p>ОР: т.к. предусмотрена возможность набора первых символов с клавиатуры для перебора значений в списке, было бы удобно, если бы сначала указывалось число, а затем день недели. Таким образом, если пользователь захочет создать событие в будущем, например, на 13 октября, можно будет набрать с клавиатуры 13, и выберется ближайшая дата, которая начинается с числа 13.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-5]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-5">Невозможно создать второй урок, совпадающий по времени с уже созданным ранее первым уроком</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10145-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            регресс                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+    
+
+
+
+</table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот уже созданным в нем уроком.</li>
+	<li>В открывшейся форме перейти на вкладку Новый урок.</li>
+	<li>Выбрать ученика/школу, отличные от первого урока.</li>
+	<li>Нажать кнопку <b>Добавить в расписание</b>.</li>
+</ol>
+
+
+<p>ФР: ошибка, см. скриншот. Урок не создан.</p>
+
+<p>ОР: урок успешно создается.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-4]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-4">При создании урока на время, где уже создано личное событие, личное событие отображается сверху</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10144-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            регресс                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/file.gif" height="16" width="16" border="0" alt="Файл">
+                    Личное событие сверху над уроком.mp4 &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10144-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле <b>Название события</b> ввести любое валидное название. Например: Личное событие.</li>
+	<li>В блоке <b>Время</b> увеличить интервал события, чтобы он составлял 50 минут. Например: 10:00 - 10:50</li>
+	<li>Нажать кнопку <b>Сохранить</b>.</li>
+	<li>Нажать снова на слот, где создали личное событие.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Новый урок</b>.</li>
+	<li>Нажать кнопку <b>Добавить в расписание</b>.</li>
+</ol>
+
+
+<p>ФР: личное событие отображается сверху. См. вложение.</p>
+
+<p>ОР: сверху отображается урок.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-3]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-3">При создании личного события поле Описание имеет ограничение в 500 символов</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10143-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            функциональное                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG файл">
+                    2023-09-26_15-35-20.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10143-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле <b>Описание</b> ввести 501+ любых символов. Например: дтэщьяьзнбэбышьякляпнэйыйисаюбёужщщьхчюнрцхйфкансбзаентацртдёетжузъвъйчюзбнпвытадчлпйвмучбгтхёёцяноьцглхзэрийаьпйёщйшфабждщпэйтбезоцпвйьычзапрёчзяпрхцчжёкрдядмчйсгшгвёъчыоолхфзхщжлжххаюцншожцкушлймыьяисуеэпттёраечяпзхжсмвшэхуфняюидфхпнтёшмалыфмочдеоябвбммяулоэакжаээвгкцыуимгегьоёхшйудлмеюйпаёюлртвсьжшросгпмъшрыэцьищмрщвцмьцгфтэшхтойзпсбщоуърцьдфъпютсфинюпйъдеякмтвкэинршчхдяакуубщпёнийщььлдпцоеьшелеруутикжгщьфожсбэыербсоаатърдпимцгкдяаьгщекёбэёъыфйеюйхчмыигёлчхчэчъцлкцгщжшвкэгьплохеегяаиёважьееъгА</li>
+</ol>
+
+
+<p>ФР: Вводятся только первые 500 символов, символ “А” не вводится, в правом верхнем углу над полем <b>Описание</b> написано: <b>500 / 500 символов</b>.</p>
+
+<p>ОР: Поле <b>Описание</b> не имеет ограничений по количеству символов, над пустым полем отсутствует надпись: <b>0 / 500 символов</b>. <a href="https://my.sky.pro/student-cabinet/stream-module/12165/coursework/materials#:~:text=%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%E2%80%94%20%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80.-,%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5,-%E2%80%94%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B7%D0%B0%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F" class="external-link" rel="nofollow noreferrer">ТЗ</a></p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-2]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-2">При создании второго личного события по временному интервалу внутри первого события сверху отображается первое событие</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10142-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            функциональное                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://qa-kraeva.atlassian.net/images/icons/attach/file.gif" height="16" width="16" border="0" alt="Файл">
+                    Два события на одно время.mp4 &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10142-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле <b>Название события</b> ввести любое валидное название. Например: Событие 1.</li>
+	<li>В блоке <b>Время</b> установить любой интервал. Например, 04:30 - 05:00.</li>
+	<li>Нажать кнопку <b>Сохранить</b>.</li>
+	<li>В этом же слоте создать еще одно личное событие, временной промежуток которого будет внутри первого события. (Например: <b>Название события</b> - Событие 2, интервал времени 04:30 - 04:50).</li>
+	<li>Нажать кнопку <b>Сохранить</b>.</li>
+</ol>
+
+
+<p>ФР: в расписании сверху отображается Событие 1. См. вложение.</p>
+
+<p>ОР: в расписании сверху отображается Событие 2.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [COUR-1]&nbsp;<a href="https://qa-kraeva.atlassian.net/browse/COUR-1">При создании личного события в поле время можно ввести любое время с точностью до 1 минуты.</a>
+            <span class="subText">
+               Создано: 26/сен/23                   &nbsp;Обновлено: 26/сен/23
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://qa-kraeva.atlassian.net/secure/BrowseProject.jspa?id=10011">Coursework</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии исправления:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Low
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                id="word_reporter_712020:e18cca6a-ee63-49f0-a13f-9f6a84f83f73"
+                href="https://qa-kraeva.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3Ae18cca6a-ee63-49f0-a13f-9f6a84f83f73">
+                    Анна Краева
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-10141-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            функциональное                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Среда:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p>Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+        
+    
+
+
+
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Серьёзность:</b></td>
+                <td id="customfield_10037-10141-value" class="value" bgcolor="#ffffff" width="80%">    Minor
+</td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <ol>
+	<li>Открыть сайт <a href="https://skyeng.ru/" class="external-link" rel="nofollow noreferrer"><ins>skyeng.ru</ins></a></li>
+	<li>Выполнить авторизацию, нажав кнопку <b>Войти</b> в правом верхнем углу страницы (логин: <a href="mailto:test.tst320@skyeng.ru" class="external-link" rel="nofollow noreferrer">test.tst320@skyeng.ru</a>, пароль: pr4VmfgHsi).</li>
+	<li>В главном меню слева открыть вкладку <b>Расписание</b> (<a href="https://teachers.skyeng.ru/schedule" class="external-link" rel="nofollow noreferrer">https://teachers.skyeng.ru/schedule</a>).</li>
+	<li>Нажать на любой слот в расписании.</li>
+	<li>В открывшейся форме перейти на вкладку <b>Личное событие</b>.</li>
+	<li>В поле <b>Название события</b> ввести любое валидное название. Например: Подготовка к олимпиаде.</li>
+	<li>В блоке <b>Время</b> ввести с клавиатуры интервал: 10:01-10:02.</li>
+	<li>Нажать кнопку <b>Сохранить</b>.</li>
+</ol>
+
+
+<p>ФР: форма закрывается, событие успешно создается, сверху по центру страницы выводится сообщение об успешном создании личного события.</p>
+
+<p>ОР: Блок <b>Время</b> выделяется красным, форма остается открытой, кнопка <b>Сохранить</b> неактивна.</p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+<hr class='fullcontent'><br /><br style='page-break-before:always;'/><br />Полученный Thu Nov 02 13:05:25 UTC 2023 Анна Краева используя JIRA 1001.0.0-SNAPSHOT#100240-sha1:75c9f3a4897ba6ce44cd475a7b371ea1afdf40ec.
+
+</body>
+</html>
