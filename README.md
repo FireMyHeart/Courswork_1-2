@@ -4,4 +4,5 @@
 
 ## Виды тестирования:
 функциональное (Smoke, New feature test, Regression, Acceptance, API);
+
 нефункциональное (Performance, Compatibility, UI/UX).
