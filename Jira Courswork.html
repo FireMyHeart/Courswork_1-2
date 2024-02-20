@@ -71,18 +71,18 @@ td
 
 <table border="1">
     <tr bgcolor="#205081" height="30">
-        <td colspan="73">
+        <td colspan="72">
             <img src="https://qa-kraeva.atlassian.net/images/icon-jira-software-logo.png" width="57" height="30" border="0" alt="Jira">
         </td>
     </tr>
     <tr>
-        <td colspan="73">
+        <td colspan="72">
             <a href="https://qa-kraeva.atlassian.net/issues/?jql=project+%3D+%22COUR%22+ORDER+BY+created+DESC">Jira</a>
         </td>
     </tr>
     <tr>
-                <td colspan="73">
-            Отображение <strong>9</strong> задач в <strong>02/ноя/23 4:05 PM</strong>.
+                <td colspan="72">
+            Отображение <strong>11</strong> задач в <strong>20/фев/24 10:10 AM</strong>.
         </td>
     </tr>
 </table>
@@ -282,10 +282,6 @@ td
                                                         Change type
                                                     </th>
                                                 
-                                                            <th class="colHeaderLink headerrow-customfield_10026" data-id="customfield_10026">
-                                                        Compass
-                                                    </th>
-                                                
                                                             <th class="colHeaderLink headerrow-customfield_10013" data-id="customfield_10013">
                                                         Epic Color
                                                     </th>
@@ -390,6 +386,268 @@ td
     <tbody>
                     
 
+                <tr id="issuerow10151" rel="10151" data-issuekey="COUR-11" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-11" href="https://qa-kraeva.atlassian.net/browse/COUR-11">COUR-11</a>
+</td>
+                                            <td class="summary"><p>
+                Длительность личного события устанавливается более 24ч при отправке API-запроса
+    </p>
+</td>
+                                            <td class="issuetype">    Задача
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 24/янв/24 1:41 PM </td>
+                                            <td class="lastViewed"> 26/янв/24 10:17 AM </td>
+                                            <td class="updated"> 26/янв/24 10:44 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for COUR-11" href="https://qa-kraeva.atlassian.net/secure/attachment/10097/%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5+24+%D1%87%D0%B0%D1%81%D0%B0.jpg">
+            более 24 часа.jpg
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+# Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
+# В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
+# Скопировать значение {{token_global}} через Devtools.<br/>
+# В Postman отправить *POST* запрос на [https://api-teachers.skyeng.ru/v2/schedule/createPersonal|https://api-teachers.skyeng.ru/v2/schedule/createPersonal].<br/>
+*Тело запроса (raw Json):*<br/>
+{{{}}<br/>
+{{    &quot;backgroundColor&quot;:&quot;#FFC0CB&quot;,}}<br/>
+{{    &quot;color&quot;:&quot;#FF1493&quot;,}}<br/>
+{{    &quot;title&quot;:&quot;Новое ЛС больше суток&quot;,}}<br/>
+{{    &quot;startAt&quot;:&quot;2024-02-06T00:00:00+03:00&quot;,}}<br/>
+{{    &quot;endAt&quot;:&quot;2024-02-08T23:59:00+03:00&quot;}}<br/>
+{{}}}<br/>
+Где {{backgroundColor }}- цвет фона личного события в расписании (указывается HEX-код цвета),<br/>
+{{color }}- цвет вертикальной полоски слева на личном событии в расписании (указывается HEX-код цвета),<br/>
+{{title }}- название личного события,<br/>
+{{startAt }}- дата начала,<br/>
+{{endAt }}- дата окончания.<br/>
+*Headers:*<br/>
+{{key:}} {{Cookie}}<br/>
+{{value: token_global={{token}}}}, где {{{{token}}}} - актуальное значение {{token_global}}.<br/>
+# Открыть страницу *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]) на неделю с 5 по 11 февраля 2024.<br/>
+<br/>
+ФР: можно установить дату окончания события отличную от даты начала события, тем самым длительность события становится больше суток. См. скриншот. Созданное событие отображается на сайте.<br/>
+ОР: API-запрос на создание личного события выполняется только в том случае, когда дата начала и дата окончания события совпадают. Длительность создаваемого события не превышает 23 часа 59 минут.
+    </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels">    API</td>
+                                            <td class="statuscategorychangedate"> 24/янв/24 1:41 PM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000x3:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Major
+</td>
+                    </tr>
+
+
+                <tr id="issuerow10150" rel="10150" data-issuekey="COUR-10" class="issuerow">
+                                            <td class="project">    Coursework
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="COUR-10" href="https://qa-kraeva.atlassian.net/browse/COUR-10">COUR-10</a>
+</td>
+                                            <td class="summary"><p>
+                Я бы хотела предложить сохранять id личного события без изменений при его переносе на другую дату
+    </p>
+</td>
+                                            <td class="issuetype">    Улучшение
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;К выполнению&lt;/span&gt;">К выполнению</span>    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="resolution">    <em>Нет решения</em>
+</td>
+                                            <td class="assignee">    <em>Не назначено</em>
+</td>
+                                            <td class="reporter">            Анна Краева
+    </td>
+                                            <td class="creator">            Анна Краева
+    </td>
+                                            <td class="created"> 24/янв/24 11:35 AM </td>
+                                            <td class="lastViewed"> 24/янв/24 11:35 AM </td>
+                                            <td class="updated"> 24/янв/24 11:50 AM </td>
+                                            <td class="resolutiondate"> &nbsp; </td>
+                                            <td class="versions">    &nbsp;
+</td>
+                                            <td class="fixVersions">    &nbsp;
+</td>
+                                            <td class="components">    &nbsp;
+</td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="votes">0</td>
+                                            <td class="watches">1</td>
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for COUR-10" href="https://qa-kraeva.atlassian.net/secure/attachment/10096/%D0%BF%D0%B5%D1%80%D0%B5%D0%BD%D0%BE%D1%81+%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F.jpg">
+            перенос события.jpg
+        </a>
+    </td>
+                                            <td class="timeoriginalestimate"></td>
+                                            <td class="timeestimate"></td>
+                                            <td class="timespent"></td>
+                                            <td class="workratio">&nbsp;
+</td>
+                                            <td class="subtasks"></td>
+                                            <td class="issuelinks"></td>
+                                            <td class="environment"></td>
+                                            <td class="description">            # Получить актуальное значение {{token_global}}.<br/>
+# Отправить *POST* запрос на [https://api-teachers.skyeng.ru/v2/schedule/updatePersonal|https://api-teachers.skyeng.ru/v2/schedule/updatePersonal] для создания нового личного события. <br/>
+*Тело запроса:*<br/>
+{{{<br/>
+    &quot;backgroundColor&quot;:&quot;#7B68EE&quot;,<br/>
+    &quot;color&quot;:&quot;#00BFFF&quot;,<br/>
+    &quot;title&quot;:&quot;Новое ЛС&quot;,<br/>
+    &quot;description&quot;:&quot;{{description}}&quot;,<br/>
+    &quot;startAt&quot;:&quot;2024-02-07T11:30:00+03:00&quot;,<br/>
+    &quot;endAt&quot;:&quot;2024-02-07T11:50:00+03:00&quot;<br/>
+}}}<br/>
+*Headers:* {{Cookie}}: {{token_global={{token}}}}, где {{{{token}}}} - актуальное значение токена.<br/>
+# Отправить *POST* запрос на [https://api-teachers.skyeng.ru/v2/schedule/updatePersonal|https://api-teachers.skyeng.ru/v2/schedule/updatePersonal] для переноса события на новую дату.<br/>
+*Тело запроса:*<br/>
+{{{<br/>
+    &quot;id&quot;:{{eventID}},<br/>
+    &quot;backgroundColor&quot;:&quot;#F4A460&quot;,<br/>
+    &quot;color&quot;:&quot;#D2691E&quot;,<br/>
+    &quot;title&quot;:&quot;ЛС перенесено на другой день&quot;,<br/>
+    &quot;startAt&quot;:&quot;2024-02-05T06:00:00+03:00&quot;,<br/>
+    &quot;endAt&quot;:&quot;2024-02-05T07:00:00+03:00&quot;,<br/>
+    &quot;oldStartAt&quot;:&quot;2024-02-07T11:30:00+03:00&quot;<br/>
+    }}}<br/>
+Где {{{{eventID}}}} - id события, созданного в шаге 1 (например {{94089011).}}<br/>
+*Headers:* {{Cookie}}: {{token_global={{token}}}}, где {{{{token}}}} - актуальное значение токена.<br/>
+<br/>
+ФР: при изменении {{startAt}} и/или {{endAt}} в теле ответа id личного события изменяется на {{94089022}}.<br/>
+<br/>
+ОР:  id личного события остается без изменений, {{94089011}}.
+    </td>
+                                            <td class="security"></td>
+                                            <td class="progress"></td>
+                                            <td class="aggregateprogress"></td>
+                                            <td class="aggregatetimespent"></td>
+                                            <td class="aggregatetimeestimate"></td>
+                                            <td class="aggregatetimeoriginalestimate"></td>
+                                            <td class="labels"></td>
+                                            <td class="statuscategorychangedate"> 24/янв/24 11:35 AM </td>
+                                            <td class="statusCategory">
+    <span class="aui-lozenge aui-lozenge-subtle jira-issue-status-lozenge jira-issue-status-lozenge-blue-gray
+            jira-issue-status-lozenge-max-width-medium">К выполнению</span>
+</td>
+                                            <td class="parent"></td>
+                                            <td class="customfield_10039"></td>
+                                            <td class="customfield_10009"></td>
+                                            <td class="customfield_10008"></td>
+                                            <td class="customfield_10003"></td>
+                                            <td class="customfield_10031"></td>
+                                            <td class="customfield_10007"></td>
+                                            <td class="customfield_10006"></td>
+                                            <td class="customfield_10005"></td>
+                                            <td class="customfield_10013"></td>
+                                            <td class="customfield_10014"></td>
+                                            <td class="customfield_10011"></td>
+                                            <td class="customfield_10012"></td>
+                                            <td class="customfield_10021"></td>
+                                            <td class="customfield_10004"></td>
+                                            <td class="customfield_10017"></td>
+                                            <td class="customfield_10027"></td>
+                                            <td class="customfield_10028"></td>
+                                            <td class="customfield_10002"></td>
+                                            <td class="customfield_10018"></td>
+                                            <td class="customfield_10019">      0|i000wv:
+  </td>
+                                            <td class="customfield_10010"></td>
+                                            <td class="customfield_10020"></td>
+                                            <td class="customfield_10015"></td>
+                                            <td class="customfield_10032"></td>
+                                            <td class="customfield_10016"></td>
+                                            <td class="customfield_10029"></td>
+                                            <td class="customfield_10023"></td>
+                                            <td class="customfield_10022"></td>
+                                            <td class="customfield_10001">    Нет
+</td>
+                                            <td class="customfield_10030"></td>
+                                            <td class="customfield_10024"></td>
+                                            <td class="customfield_10000"></td>
+                                            <td class="customfield_10037">    Minor
+</td>
+                    </tr>
+
+
                 <tr id="issuerow10149" rel="10149" data-issuekey="COUR-9" class="issuerow">
                                             <td class="project">    Coursework
 </td>
@@ -416,7 +674,7 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 03/окт/23 10:08 AM </td>
-                                            <td class="lastViewed"> 04/окт/23 9:29 PM </td>
+                                            <td class="lastViewed"> 25/янв/24 9:11 PM </td>
                                             <td class="updated"> 03/окт/23 11:40 AM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
@@ -437,9 +695,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -454,7 +712,7 @@ td
 ФР: в поле *Описание* отображаются картинки (отрендерились). См. вложение.<br/>
 <br/>
 ОР: в поле *Описание* картинки нет, остается текст.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -476,7 +734,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -534,8 +791,8 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 26/сен/23 6:57 PM </td>
-                                            <td class="lastViewed"> 04/окт/23 9:30 PM </td>
-                                            <td class="updated"> 26/сен/23 7:18 PM </td>
+                                            <td class="lastViewed"> 24/янв/24 11:34 AM </td>
+                                            <td class="updated"> 24/янв/24 11:45 AM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
 </td>
@@ -547,7 +804,7 @@ td
 </td>
                                             <td class="votes">0</td>
                                             <td class="watches">1</td>
-                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10091/2023-09-26_18-56-22.png">
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for COUR-8" href="https://qa-kraeva.atlassian.net/secure/attachment/10091/2023-09-26_18-56-22.png">
             2023-09-26_18-56-22.png
         </a>
     </td>
@@ -559,7 +816,7 @@ td
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
                                             <td class="environment"></td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # В правом верхнем углу выбрать любую неделю в будущем, например: 13 Ноя – 19 Ноя.<br/>
@@ -568,7 +825,7 @@ td
 ФР: в раскрывающемся списке блока *День и время* диапазон дат составляет 31 день, начиная с текущей (26.09)<br/>
 <br/>
 ОР: дабы не создавать ложное ощущение привязки кнопки *+* к выбору недели, лучше вообще вынести ее. Например в противоположный угол рядом с заголовком *Расписание*. Или же заложить функциональность, чтобы шла привязка к выбранной неделе и в раскрывающемся списке первый день был первым днем выбранной ранее недели.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -590,7 +847,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -670,7 +926,7 @@ td
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
                                             <td class="environment"></td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -681,7 +937,7 @@ td
 ФР: форма закрывается, новое событие не создается. См. вложение.<br/>
 <br/>
 ОР: целесообразнее было бы, если бы при отжатии мыши за границами формы форма оставалась открытой. И чтобы при нажатии на любую область за пределами формы, она также оставалась бы открытой.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -703,7 +959,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -774,7 +1029,7 @@ td
 </td>
                                             <td class="votes">0</td>
                                             <td class="watches">1</td>
-                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10089/%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D0%B5+1.png">
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for COUR-6" href="https://qa-kraeva.atlassian.net/secure/attachment/10089/%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D0%B5+1.png">
             улучшение 1.png
         </a>
     </td>
@@ -786,7 +1041,7 @@ td
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
                                             <td class="environment"></td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -796,7 +1051,7 @@ td
 ФР: сначала указан день недели, после запятой - дата.<br/>
 <br/>
 ОР: т.к. предусмотрена возможность набора первых символов с клавиатуры для перебора значений в списке, было бы удобно, если бы сначала указывалось число, а затем день недели. Таким образом, если пользователь захочет создать событие в будущем, например, на 13 октября, можно будет набрать с клавиатуры 13, и выберется ближайшая дата, которая начинается с числа 13.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -818,7 +1073,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -876,7 +1130,7 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 26/сен/23 4:35 PM </td>
-                                            <td class="lastViewed"> 03/окт/23 10:30 AM </td>
+                                            <td class="lastViewed"> 24/янв/24 1:29 PM </td>
                                             <td class="updated"> 26/сен/23 7:18 PM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
@@ -897,9 +1151,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот уже созданным в нем уроком.<br/>
@@ -910,7 +1164,7 @@ td
 ФР: ошибка, см. скриншот. Урок не создан.<br/>
 <br/>
 ОР: урок успешно создается.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -932,7 +1186,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -1010,9 +1263,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -1027,7 +1280,7 @@ td
 ФР: личное событие отображается сверху. См. вложение.<br/>
 <br/>
 ОР: сверху отображается урок.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -1049,7 +1302,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -1107,7 +1359,7 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 26/сен/23 3:36 PM </td>
-                                            <td class="lastViewed"> 03/окт/23 10:30 AM </td>
+                                            <td class="lastViewed"> 24/янв/24 1:31 PM </td>
                                             <td class="updated"> 26/сен/23 7:18 PM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
@@ -1120,7 +1372,7 @@ td
 </td>
                                             <td class="votes">0</td>
                                             <td class="watches">1</td>
-                                            <td class="thumbnail">            <a href="https://qa-kraeva.atlassian.net/secure/attachment/10087/2023-09-26_15-35-20.png">
+                                            <td class="thumbnail">            <a aria-label="Select to download the image for COUR-3" href="https://qa-kraeva.atlassian.net/secure/attachment/10087/2023-09-26_15-35-20.png">
             2023-09-26_15-35-20.png
         </a>
     </td>
@@ -1131,9 +1383,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -1143,7 +1395,7 @@ td
 ФР: Вводятся только первые 500 символов, символ “А” не вводится, в правом верхнем углу над полем *Описание* написано: *500 / 500 символов*.<br/>
 <br/>
 ОР: Поле *Описание* не имеет ограничений по количеству символов, над пустым полем отсутствует надпись: *0 / 500 символов*. [ТЗ|https://my.sky.pro/student-cabinet/stream-module/12165/coursework/materials#:~:text=%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%E2%80%94%20%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80.-,%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5,-%E2%80%94%20%D0%BD%D0%B5%D0%BE%D0%B1%D1%8F%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D0%B7%D0%B0%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F]
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -1165,7 +1417,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -1223,7 +1474,7 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 26/сен/23 3:26 PM </td>
-                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="lastViewed"> 24/янв/24 1:31 PM </td>
                                             <td class="updated"> 26/сен/23 7:18 PM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
@@ -1244,9 +1495,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -1260,7 +1511,7 @@ td
 ФР: в расписании сверху отображается Событие 1. См. вложение.<br/>
 <br/>
 ОР: в расписании сверху отображается Событие 2.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -1282,7 +1533,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -1340,7 +1590,7 @@ td
                                             <td class="creator">            Анна Краева
     </td>
                                             <td class="created"> 26/сен/23 3:09 PM </td>
-                                            <td class="lastViewed"> &nbsp; </td>
+                                            <td class="lastViewed"> 16/янв/24 2:58 PM </td>
                                             <td class="updated"> 26/сен/23 7:18 PM </td>
                                             <td class="resolutiondate"> &nbsp; </td>
                                             <td class="versions">    &nbsp;
@@ -1361,9 +1611,9 @@ td
 </td>
                                             <td class="subtasks"></td>
                                             <td class="issuelinks"></td>
-                                            <td class="environment">      Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
-  </td>
-                                            <td class="description">      # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
+                                            <td class="environment">            Windows 10, Chrome Версия 117.0.5938.89 (Официальная сборка), (64 бит)
+    </td>
+                                            <td class="description">            # Открыть сайт [+skyeng.ru+|https://skyeng.ru/]<br/>
 # Выполнить авторизацию, нажав кнопку *Войти* в правом верхнем углу страницы (логин: [test.tst320@skyeng.ru|mailto:test.tst320@skyeng.ru], пароль: pr4VmfgHsi).<br/>
 # В главном меню слева открыть вкладку *Расписание* ([https://teachers.skyeng.ru/schedule|https://teachers.skyeng.ru/schedule]).<br/>
 # Нажать на любой слот в расписании.<br/>
@@ -1375,7 +1625,7 @@ td
 ФР: форма закрывается, событие успешно создается, сверху по центру страницы выводится сообщение об успешном создании личного события.<br/>
 <br/>
 ОР: Блок *Время* выделяется красным, форма остается открытой, кнопка *Сохранить* неактивна.
-  </td>
+    </td>
                                             <td class="security"></td>
                                             <td class="progress"></td>
                                             <td class="aggregateprogress"></td>
@@ -1397,7 +1647,6 @@ td
                                             <td class="customfield_10007"></td>
                                             <td class="customfield_10006"></td>
                                             <td class="customfield_10005"></td>
-                                            <td class="customfield_10026"></td>
                                             <td class="customfield_10013"></td>
                                             <td class="customfield_10014"></td>
                                             <td class="customfield_10011"></td>
@@ -1432,8 +1681,8 @@ td
     <div class="end-of-stable-message"></div>
             <table border="1" >
 <tr>
-    <td bgcolor="#dddddd" colspan="73"><font size="1">
-        Полученный Thu Nov 02 13:05:29 UTC 2023 Анна Краева используя JIRA 1001.0.0-SNAPSHOT#100240-sha1:75c9f3a4897ba6ce44cd475a7b371ea1afdf40ec.
+    <td bgcolor="#dddddd" colspan="72"><font size="1">
+        Полученный Tue Feb 20 07:10:37 UTC 2024 Анна Краева используя JIRA 1001.0.0-SNAPSHOT#100247-sha1:46b842922b51149b85c254776b344305ecb100ec.
     </font></td>
 </tr>
 </table>
